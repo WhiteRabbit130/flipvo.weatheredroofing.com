@@ -1,0 +1,25 @@
+#vue-app {
+    font-size: 1rem;
+}
+
+/* Path: resources/css/admin/rentals.css */
+/* small screens */
+@media (max-width: 576px) {
+    #vue-app {
+        font-size: 0.8rem;
+    }
+}
+
+/* medium screens */
+@media (min-width: 576px) {
+    #vue-app {
+        font-size: 0.9rem;
+    }
+}
+
+/* large screens */
+@media (min-width: 992px) {
+    #vue-app {
+        font-size: 1rem;
+    }
+}

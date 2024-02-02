@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="e9492b97-e260-49f5-978a-427fc43a4102" name="live-servers" url="https://weatheredroofing.com">
+        <fileTransfer rootFolder="/var/www/weatheredroofing.com" accessType="SFTP" host="live-servers" port="22" sshConfigId="5969386f-74fb-438b-bdc2-82b8c84bfda3" sshConfig="ubuntu@live-servers:22 agent" authAgent="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

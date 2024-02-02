@@ -1,0 +1,51 @@
+.dataTables_wrapper {
+    /*padding: 0;*/
+    font-size: .8rem;
+}
+
+
+/*fixes all dataTable drop down select*/
+.dataTables_length select {
+    min-width: 4.5rem;
+    margin: 0 .8rem;
+}
+
+.dataTables_wrapper {
+    font-size: .8rem;
+}
+
+
+.no-wrap {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* Mobile only */
+@media (max-width: 767px) {
+    table.dataTable tbody th, table.dataTable tbody td {
+        padding: 2px 4px;
+    }
+
+    table.dataTable td {
+        /*min-width: 200px !important; !* Adjust the value as needed *!*/
+    }
+
+}
+/* Tablet only */
+@media (min-width: 768px) and (max-width: 1024px) {
+    table.dataTable tbody th, table.dataTable tbody td {
+        /*padding: 8px 10px;*/
+    }
+}
+/* Desktop only */
+@media (min-width: 1025px) {
+    .dataTables_wrapper {
+        font-size: 1rem;
+    }
+
+    table.dataTable tbody th, table.dataTable tbody td {
+        padding: 8px 10px;
+    }
+}
