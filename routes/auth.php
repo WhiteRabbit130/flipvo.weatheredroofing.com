@@ -14,6 +14,7 @@ use App\Http\Controllers\ParentController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ImageMetaController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('guest')->group(function () {
@@ -73,6 +74,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
     /*------------------------------------------------- */
     Route::get('/admin', [AdminController::class, 'index'])
         ->name('admin');
+    Route::resource('imagemeta', ImageMetaController::class);
 
     /* ------------------------------------------------ */
     /*  ---------------- Dashboard Routes ------------- */

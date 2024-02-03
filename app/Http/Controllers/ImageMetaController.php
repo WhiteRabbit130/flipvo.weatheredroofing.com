@@ -12,7 +12,9 @@ class ImageMetaController extends Controller
      */
     public function index()
     {
-        //
+        return response()->view('admin', [
+            'images' => ImageMeta::orderBy('updated_at', 'desc')->get(),
+        ]);
     }
 
     /**
