@@ -16,7 +16,6 @@ class ImageMeta extends Model
         'title',
         'caption',
         'description',
-
         'filename',
         'path',
         'url',

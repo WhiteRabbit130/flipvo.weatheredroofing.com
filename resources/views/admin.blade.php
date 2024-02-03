@@ -82,7 +82,7 @@
                                 <div class="col">
                                     {{--Image Container--}}
                                     <div class="border">
-<!-- {{--                                        <div class="image-container grid grid-cols-2 md:grid-cols-6"></div>--}} -->
+{{--                                        <div class="image-container grid grid-cols-2 md:grid-cols-6"></div>--}}
                                         <div class="image-container grid grid-cols-4"></div>
                                     </div>
                                 </div>
@@ -106,7 +106,7 @@
 {{--    <div id="image-template" class="rounded m-1 p-1 border cursor-pointer relative pb-0 mb-0 hidden">--}}
         <button type="button"
                 class="delete py-0.5 px-3 absolute -top-1 -left-1 rounded-md border shadow text-sm font-medium text-white sm:text-xs bg-red-600 hover:bg-red-700 focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
-            <i class="fas fa-trash-alt"></i>
+            <i class="fa fa-trash-alt"></i>
         </button>
         <img class="" src="" alt="">
         <div class="progress relative -top-1 rounded-t-none">
