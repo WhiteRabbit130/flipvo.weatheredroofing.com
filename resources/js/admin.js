@@ -268,14 +268,14 @@ function showImage(file) {
         $clone.appendTo('.image-container');
 
         // clone again
-        let $pre = $clone.clone(true);
-        $pre.appendTo('.image-container');
+        // let $pre = $clone.clone(true);
+        // $pre.appendTo('.image-container');
 
-        $clone.clone(true).appendTo('.image-container');
-        $clone.clone(true).appendTo('.image-container');
-        $clone.clone(true).appendTo('.image-container');
-        $clone.clone(true).appendTo('.image-container');
-        $clone.clone(true).appendTo('.image-container');
+        // $clone.clone(true).appendTo('.image-container');
+        // $clone.clone(true).appendTo('.image-container');
+        // $clone.clone(true).appendTo('.image-container');
+        // $clone.clone(true).appendTo('.image-container');
+        // $clone.clone(true).appendTo('.image-container');
 
         // todo - set the primary stuff...
         // add primary to first
