@@ -125,9 +125,7 @@ class ImageMetaController extends Controller
             Storage::disk('public')->delete($post->path);
             $fileName = $file->getClientOriginalName(); // You can customize the file name if needed
             Storage::disk('public')->put('images/' . $fileName, file_get_contents($file));
-            // $filePath = Storage::disk('public')->put('images/posts/featured-images', request()->file('featured_image'), 'public');
             $validated['path'] = 'images/' . $fileName;
-            // $validated['description'] = $request->content;
         }
 
         $update = $post->update($validated);
