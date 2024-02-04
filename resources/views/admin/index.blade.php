@@ -4,9 +4,6 @@
 
 @push('js')
     <!-- @vite('resources/js/admin.js') -->
-    <script>
-
-    </script>
 @endpush
 
 <x-app-layout>
