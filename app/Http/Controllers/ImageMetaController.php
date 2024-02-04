@@ -12,7 +12,7 @@ class ImageMetaController extends Controller
      */
     public function index()
     {
-        return response()->view('admin', [
+        return response()->view('admin.index', [
             'images' => ImageMeta::orderBy('updated_at', 'desc')->get(),
         ]);
     }
@@ -22,7 +22,7 @@ class ImageMetaController extends Controller
      */
     public function create()
     {
-        //
+        return response()->view('admin.form');
     }
 
 
@@ -31,7 +31,7 @@ class ImageMetaController extends Controller
      */
     public function tmpUpload(Request $request)
     {
-        dd($request->all());
+        // dd($request->all());
 
         // todo - need to crop images, etc...
         $request->validate([
@@ -62,39 +62,89 @@ class ImageMetaController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
-        //
+        $validated = $request->validated();
+
+        if ($request->hasFile('featured_image')) {
+            // put image in the public storage
+            $filePath = Storage::disk('public')->put('images/posts/featured-images', request()->file('featured_image'));
+            $validated['featured_image'] = $filePath;
+        }
+
+        // insert only requests that already validated in the StoreRequest
+        $create = ImageMeta::create($validated);
+
+        if($create) {
+            // add flash for the success notification
+            session()->flash('notif.success', 'Image created successfully!');
+            return redirect()->route('admin.index');
+        }
+
+        return abort(500);
     }
+
 
     /**
      * Display the specified resource.
      */
-    public function show(ImageMeta $imageMeta)
+    public function show(string $id)
     {
-        //
+        return response()->view('admin.show', [
+            'image' => ImageMeta::findOrFail($id),
+        ]);
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(ImageMeta $imageMeta)
+    public function edit(String $id)
     {
-        //
+        return response()->view('admin.form', [
+            'image' => ImageMetha::findOrFail($id),
+        ]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateImageMetaRequest $request, ImageMeta $imageMeta)
+    public function update(UpdateRequest $request, String $id)
     {
-        //
+        $post = ImageMeta::findOrFail($id);
+        $validated = $request->validated();
+
+        if ($request->hasFile('featured_image')) {
+            // delete image
+            Storage::disk('public')->delete($post->featured_image);
+
+            $filePath = Storage::disk('public')->put('images/posts/featured-images', request()->file('featured_image'), 'public');
+            $validated['featured_image'] = $filePath;
+        }
+
+        $update = $post->update($validated);
+
+        if($update) {
+            session()->flash('notif.success', 'Image updated successfully!');
+            return redirect()->route('admin.index');
+        }
+
+        return abort(500);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(ImageMeta $imageMeta)
+    public function destroy(string $id)
     {
-        //
+        $post = ImageMeta::findOrFail($id);
+
+        Storage::disk('public')->delete($post->featured_image);
+
+        $delete = $post->delete($id);
+
+        if($delete) {
+            session()->flash('notif.success', 'Image deleted successfully!');
+            return redirect()->route('admin.index');
+        }
+
+        return abort(500);
     }
 }

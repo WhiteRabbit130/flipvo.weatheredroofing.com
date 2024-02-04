@@ -13,9 +13,9 @@
     <x-slot name="header">
         <div class="flex justify-between">
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                {{ 'Posts' }}
+                {{ 'Images' }}
             </h2>
-            <a href="{{ route('posts.create') }}" class="bg-blue-500 text-white px-4 py-2 rounded-md">ADD</a>
+            <a href="{{ route('imagemeta.create') }}" class="bg-blue-500 text-white px-4 py-2 rounded-md">ADD</a>
         </div>
     </x-slot>
 
@@ -41,9 +41,9 @@
                                     <td class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400">{{ $image->created_at }}</td>
                                     <td class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400">{{ $image->updated_at }}</td>
                                     <td class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400">
-                                        <a href="{{ route('api.images.show', $image->id) }}" class="border border-blue-500 hover:bg-blue-500 hover:text-white px-4 py-2 rounded-md">SHOW</a>
-                                        <a href="{{ route('api.images.edit', $image->id) }}" class="border border-yellow-500 hover:bg-yellow-500 hover:text-white px-4 py-2 rounded-md">EDIT</a>
-                                        <form method="post" action="{{ route('api.images.destroy', $image->id) }}" class="inline">
+                                        <a href="{{ route('imagemeta.show', $image->id) }}" class="border border-blue-500 hover:bg-blue-500 hover:text-white px-4 py-2 rounded-md">SHOW</a>
+                                        <a href="{{ route('imagemeta.edit', $image->id) }}" class="border border-yellow-500 hover:bg-yellow-500 hover:text-white px-4 py-2 rounded-md">EDIT</a>
+                                        <form method="post" action="{{ route('imagemeta.destroy', $image->id) }}" class="inline">
                                             @csrf
                                             @method('delete')
                                             <button class="border border-red-500 hover:bg-red-500 hover:text-white px-4 py-2 rounded-md">DELETE</button>

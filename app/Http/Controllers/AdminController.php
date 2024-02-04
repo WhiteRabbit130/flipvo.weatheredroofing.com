@@ -6,6 +6,7 @@ use App\Models\Invoice;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
+use App\Models\ImageMeta;
 
 class AdminController extends Controller
 {
@@ -21,7 +22,9 @@ class AdminController extends Controller
 
     public function index()
     {
-        return view('admin');
+        return response()->view('admin.index', [
+            'images' => ImageMeta::orderBy('updated_at', 'desc')->get(),
+        ]);
     }
     // todo - lessons
     //  - Get through whole flow
