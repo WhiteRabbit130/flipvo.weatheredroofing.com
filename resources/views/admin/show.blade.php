@@ -20,11 +20,11 @@
                     </div>
                     <div class="mb-6">
                         <h2 class="text-lg font-medium text-gray-900">
-                            {{ 'Content' }}
+                            {{ 'Description' }}
                         </h2>
 
                         <p class="mt-1 text-sm text-gray-600">
-                            {{ $image->content }}
+                            {{ $image->description }}
                         </p>
                     </div>
                     <div class="mb-6">
@@ -33,7 +33,7 @@
                         </h2>
 
                         <p class="mt-1 text-sm text-gray-600">
-                            <img class="h-64 w-128" src="{{ Storage::url($image->featured_image) }}" alt="{{ $image->title }}" srcset="">
+                            <img class="h-64 w-128" src="/storage/{{ $image->path }}" alt="{{ $image->title }}" srcset="">
                         </p>
                     </div>
                     <div class="mb-6">
@@ -42,7 +42,7 @@
                         </h2>
 
                         <p class="mt-1 text-sm text-gray-600">
-                            {{ $post->created_at }}
+                            {{ $image->created_at }}
                         </p>
                     </div>
                     <div class="mb-6">
@@ -51,10 +51,10 @@
                         </h2>
 
                         <p class="mt-1 text-sm text-gray-600">
-                            {{ $post->updated_at }}
+                            {{ $image->updated_at }}
                         </p>
                     </div>
-                    <a href="{{ route('admin.index') }}" class="bg-blue-500 text-white px-4 py-2 rounded-md">BACK</a>
+                    <a href="{{ route('admin') }}" class="bg-blue-500 text-white px-4 py-2 rounded-md">BACK</a>
                 </div>
             </div>
         </div>

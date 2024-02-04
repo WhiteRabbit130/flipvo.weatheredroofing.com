@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\ImageMeta;
 use Illuminate\Http\Request;
+use App\Http\Requests\ImageMeta\StoreRequest;
+use App\Http\Requests\ImageMeta\UpdateRequest;
+use Illuminate\Support\Facades\Storage;
 
 class ImageMetaController extends Controller
 {
@@ -60,14 +63,20 @@ class ImageMetaController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreRequest $request)
     {
         $validated = $request->validated();
 
         if ($request->hasFile('featured_image')) {
-            // put image in the public storage
-            $filePath = Storage::disk('public')->put('images/posts/featured-images', request()->file('featured_image'));
-            $validated['featured_image'] = $filePath;
+            $file = $request->file('featured_image');
+
+            // Move the file to the desired location within the Laravel project
+            $fileName = $file->getClientOriginalName(); // You can customize the file name if needed
+            Storage::disk('public')->put('images/' . $fileName, file_get_contents($file));
+            $validated['path'] = 'images/' . $fileName;
+            $validated['filename'] = $fileName;
+            $validated['imageable_id'] = 0;
+            $validated['imageable_type'] = 'test';
         }
 
         // insert only requests that already validated in the StoreRequest
@@ -76,7 +85,7 @@ class ImageMetaController extends Controller
         if($create) {
             // add flash for the success notification
             session()->flash('notif.success', 'Image created successfully!');
-            return redirect()->route('admin.index');
+            return redirect()->route('admin');
         }
 
         return abort(500);
@@ -99,7 +108,7 @@ class ImageMetaController extends Controller
     public function edit(String $id)
     {
         return response()->view('admin.form', [
-            'image' => ImageMetha::findOrFail($id),
+            'image' => ImageMeta::findOrFail($id),
         ]);
     }
 
@@ -113,17 +122,19 @@ class ImageMetaController extends Controller
 
         if ($request->hasFile('featured_image')) {
             // delete image
-            Storage::disk('public')->delete($post->featured_image);
-
-            $filePath = Storage::disk('public')->put('images/posts/featured-images', request()->file('featured_image'), 'public');
-            $validated['featured_image'] = $filePath;
+            Storage::disk('public')->delete($post->path);
+            $fileName = $file->getClientOriginalName(); // You can customize the file name if needed
+            Storage::disk('public')->put('images/' . $fileName, file_get_contents($file));
+            // $filePath = Storage::disk('public')->put('images/posts/featured-images', request()->file('featured_image'), 'public');
+            $validated['path'] = 'images/' . $fileName;
+            // $validated['description'] = $request->content;
         }
 
         $update = $post->update($validated);
 
         if($update) {
             session()->flash('notif.success', 'Image updated successfully!');
-            return redirect()->route('admin.index');
+            return redirect()->route('admin');
         }
 
         return abort(500);
@@ -136,13 +147,13 @@ class ImageMetaController extends Controller
     {
         $post = ImageMeta::findOrFail($id);
 
-        Storage::disk('public')->delete($post->featured_image);
+        Storage::disk('public')->delete($post->path);
 
         $delete = $post->delete($id);
 
         if($delete) {
             session()->flash('notif.success', 'Image deleted successfully!');
-            return redirect()->route('admin.index');
+            return redirect()->route('admin');
         }
 
         return abort(500);

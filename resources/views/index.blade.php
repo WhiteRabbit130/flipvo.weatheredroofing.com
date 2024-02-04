@@ -20,7 +20,7 @@
         <div class="hero_slider swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <div class="single-hero-slider bg-cover" data-bg-image="assets/img/slider-00001.jpg">
+                    <div class="single-hero-slider bg-cover" data-bg-image="{{asset('/assets/img/slider-00001.jpg') }}">
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12 col-lg-8">
@@ -29,10 +29,10 @@
                                         <h1 class="hero-title text-white">
                                             High Quality Roofing Services in the Melbourne, FL Area </h1>
                                         <div class="client">
-                                            <img src="assets/img/visa.jpg" alt="credit card logo">
-                                            <img src="assets/img/mastercard.jpg" alt="credit card logo">
-                                            <img src="assets/img/amex.jpg" alt="credit card logo">
-                                            <img src="assets/img/discover.jpg" alt="credit card logo">
+                                            <img src="{{ asset('/assets/img/visa.jpg') }}" alt="credit card logo">
+                                            <img src="{{ asset('/assets/img/mastercard.jpg') }}" alt="credit card logo">
+                                            <img src="{{ asset('/assets/img/amex.jpg') }}" alt="credit card logo">
+                                            <img src="{{ asset('/assets/img/discover.jpg') }}" alt="credit card logo">
                                             <p>Major Credit Cards Accepted</p>
                                         </div>
                                     </div>
@@ -44,7 +44,7 @@
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="single-hero-slider bg-cover" data-bg-image="assets/img/slider-00002.jpg">
+                    <div class="single-hero-slider bg-cover" data-bg-image="{{ asset('/assets/img/slider-00002.jpg') }}">
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12 col-lg-8">
@@ -54,10 +54,10 @@
                                         <h1 class="hero-title text-white">
                                             Roof Inspections for Shingle, Flat Roofs, or Metal Roofs</h1>
                                         <div class="client">
-                                            <img src="assets/img/visa.jpg" alt="credit card logo">
-                                            <img src="assets/img/mastercard.jpg" alt="credit card logo">
-                                            <img src="assets/img/amex.jpg" alt="credit card logo">
-                                            <img src="assets/img/discover.jpg" alt="credit card logo">
+                                            <img src="{{ asset('/assets/img/visa.jpg') }}" alt="credit card logo">
+                                            <img src="{{ asset('/assets/img/mastercard.jpg') }}" alt="credit card logo">
+                                            <img src="{{ asset('/assets/img/amex.jpg') }}" alt="credit card logo">
+                                            <img src="{{ asset('/assets/img/discover.jpg') }}" alt="credit card logo">
                                             <p>Major Credit Cards Accepted</p>
                                         </div>
                                     </div>
@@ -69,7 +69,7 @@
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="single-hero-slider bg-cover" data-bg-image="assets/img/slider-00003.jpg">
+                    <div class="single-hero-slider bg-cover" data-bg-image="{{ asset('assets/img/slider-00003.jpg') }}">
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12 col-lg-8">
@@ -79,10 +79,10 @@
                                         <h1 class="hero-title text-white">
                                             We Offer Financing Solutions and Take Most Insurances</h1>
                                         <div class="client">
-                                            <img src="assets/img/visa.jpg" alt="credit card logo">
-                                            <img src="assets/img/mastercard.jpg" alt="credit card logo">
-                                            <img src="assets/img/amex.jpg" alt="credit card logo">
-                                            <img src="assets/img/discover.jpg" alt="credit card logo">
+                                            <img src="{{ asset('/assets/img/visa.jpg') }}" alt="credit card logo">
+                                            <img src="{{ asset('/assets/img/mastercard.jpg') }}" alt="credit card logo">
+                                            <img src="{{ asset('/assets/img/amex.jpg') }}" alt="credit card logo">
+                                            <img src="{{ asset('/assets/img/discover.jpg') }}" alt="credit card logo">
                                             <p>Major Credit Cards Accepted</p>
                                         </div>
                                     </div>
@@ -99,13 +99,13 @@
         <div class="swiper-container hero_slider_thumb">
             <div class="swiper-wrapper swiper__inner">
                 <div class="swiper-slide">
-                    <img src="assets/img/slider-tab-00001.jpg" alt="small slider thumbnail roofing">
+                    <img src="{{ asset('/assets/img/slider-tab-00001.jpg') }}" alt="small slider thumbnail roofing">
                 </div>
                 <div class="swiper-slide">
-                    <img src="assets/img/slider-tab-00002.jpg" alt="small slider thumbnail roofing">
+                    <img src="{{ asset('/assets/img/slider-tab-00002.jpg') }}" alt="small slider thumbnail roofing">
                 </div>
                 <div class="swiper-slide">
-                    <img src="assets/img/slider-tab-00003.jpg" alt="small slider thumbnail roofing">
+                    <img src="{{ asset('/assets/img/slider-tab-00003.jpg') }}" alt="small slider thumbnail roofing">
                 </div>
             </div>
         </div>
@@ -171,7 +171,7 @@
                 <div class="col-lg-6">
                     <div class="about-left overflow-hidden">
                         <div class="bg-img">
-                            <img src="assets/img/home-01.jpg" alt="house">
+                            <img src="{{ asset('/assets/img/home-01.jpg') }}" alt="house">
                         </div>
                         <div class="funfact-home wow fadeInLeft " data-wow-delay="500ms">
                             <div class="icons">
@@ -183,7 +183,7 @@
                             </div>
                         </div>
                         <div class="shape-element">
-                            <img src="assets/img/svg/about-one-line.svg" alt="about">
+                            <img src="{{ asset('/assets/img/svg/about-one-line.svg') }}" alt="about">
                         </div>
                     </div>
                 </div>
@@ -231,7 +231,7 @@
                             <div class="author-content wow fadeInUp " data-wow-delay="500ms">
                                 <div class="autoe">
                                     <div class="autor-img">
-                                        <img src="assets/img/owner.jpg" alt="owner image">
+                                        <img src="{{ asset('/assets/img/owner.jpg') }}" alt="owner image">
                                     </div>
                                     <div class="autor-name">
                                         <h6>Anibal L. Fuentes</h6>
@@ -239,7 +239,7 @@
                                     </div>
                                 </div>
                                 <div class="signature">
-                                    <img src="assets/img/svg/sig.svg" alt="owner signature">
+                                    <img src="{{ asset('/assets/img/svg/sig.svg') }}" alt="owner signature">
                                 </div>
                             </div>
                         </div>
@@ -249,7 +249,7 @@
             </div>
         </div>
         <div class="about-shape">
-            <img src="assets/img/svg/about-1.svg" alt="owner signature">
+            <img src="{{ asset('/assets/img/svg/about-1.svg') }}" alt="owner signature">
         </div>
     </section>
     <!-- About section end -->
@@ -296,7 +296,7 @@
                 </div>
                 <div class="chose-us-middle wow fadeInUp " data-wow-delay="300ms">
                     <div class="chose_us-img">
-                        <img src="assets/img/choose-us/home.png" alt="">
+                        <img src="{{ asset('/assets/img/choose-us/home.png') }}" alt="">
                     </div>
                 </div>
                 <div class="chose-us-right wow fadeInRight " data-wow-delay="300ms">
@@ -323,7 +323,7 @@
     <!-- Why Choose Us section end -->
 
     <!-- Testimonial section Start -->
-    <section class="testimonial-wrapper section-padding bg-cover" data-bg-image="assets/img/svg/vactoe-2.svg">
+    <section class="testimonial-wrapper section-padding bg-cover" data-bg-image="{{ asset('/assets/img/svg/vactoe-2.svg">
         <div class="container">
             <div class="row">
                 <div class="col-xl-6 offset-xl-3">
@@ -341,7 +341,7 @@
                 <div class="single-client">
                     <div class="client-say-content">
                         <div class="client-say">
-                            <div class="client-img bg-cover" data-bg-image="assets/img/testimonial/testi-1.jpg">
+                            <div class="client-img bg-cover" data-bg-image="{{ asset('/assets/img/testimonial/testi-1.jpg">
                                 <div class="quite">
                                     <i class="fa-solid fa-quote-left"></i>
                                 </div>
@@ -366,7 +366,7 @@
                 <div class="single-client">
                     <div class="client-say-content">
                         <div class="client-say">
-                            <div class="client-img bg-cover" data-bg-image="assets/img/testimonial/testi-2.jpg">
+                            <div class="client-img bg-cover" data-bg-image="{{ asset('/assets/img/testimonial/testi-2.jpg">
                                 <div class="quite">
                                     <i class="fa-solid fa-quote-left"></i>
                                 </div>
@@ -390,7 +390,7 @@
                 <div class="single-client">
                     <div class="client-say-content">
                         <div class="client-say">
-                            <div class="client-img bg-cover" data-bg-image="assets/img/testimonial/testi-3.jpg">
+                            <div class="client-img bg-cover" data-bg-image="{{ asset('/assets/img/testimonial/testi-3.jpg') }}">
                                 <div class="quite">
                                     <i class="fa-solid fa-quote-left"></i>
                                 </div>
@@ -414,7 +414,7 @@
                 <div class="single-client">
                     <div class="client-say-content">
                         <div class="client-say">
-                            <div class="client-img bg-cover" data-bg-image="assets/img/testimonial/testi-4.jpg">
+                            <div class="client-img bg-cover" data-bg-image="{{ asset('/assets/img/testimonial/testi-4.jpg">
                                 <div class="quite">
                                     <i class="fa-solid fa-quote-left"></i>
                                 </div>

@@ -11,7 +11,7 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
                     {{-- don't forget to add multipart/form-data so we can accept file in our form --}}
-                    <form method="post" action="{{ isset($image) ? route('imagemeta.update', $post->id) : route('imagemeta.store') }}" class="mt-6 space-y-6" enctype="multipart/form-data">
+                    <form method="post" action="{{ isset($image) ? route('imagemeta.update', $image->id) : route('imagemeta.store') }}" class="mt-6 space-y-6" enctype="multipart/form-data">
                         @csrf
                         {{-- add @method('put') for edit mode --}}
                         @isset($image)
@@ -20,15 +20,15 @@
 
                         <div>
                             <x-input-label for="title" value="Title" />
-                            <x-text-input id="title" name="title" type="text" class="mt-1 block w-full" :value="$post->title ?? old('title')" required autofocus />
+                            <x-text-input id="title" name="title" type="text" class="mt-1 block w-full" :value="$image->title ?? old('title')" required autofocus />
                             <x-input-error class="mt-2" :messages="$errors->get('title')" />
                         </div>
 
                         <div>
-                            <x-input-label for="content" value="Content" />
+                            <x-input-label for="description" value="Description" />
                             {{-- use textarea-input component that we will create after this --}}
-                            <x-textarea-input id="content" name="content" class="mt-1 block w-full" required autofocus>{{ $post->content ?? old('content') }}</x-textarea-input>
-                            <x-input-error class="mt-2" :messages="$errors->get('content')" />
+                            <x-textarea-input id="description" name="description" class="mt-1 block w-full" required autofocus>{{ $image->description ?? old('description') }}</x-textarea-input>
+                            <x-input-error class="mt-2" :messages="$errors->get('description')" />
                         </div>
 
                         <div>
@@ -44,7 +44,7 @@
                                 "/>
                             </label>
                             <div class="shrink-0 my-2">
-                                <img id="featured_image_preview" class="h-64 w-128 object-cover rounded-md" src="{{ isset($post) ? Storage::url($post->featured_image) : '' }}" alt="Featured image preview" />
+                                <img id="featured_image_preview" class="h-64 w-128 object-cover rounded-md" src="{{ isset($image) ? '/storage/'.$image->path : '' }}" alt="Featured image preview" />
                             </div>
                             <x-input-error class="mt-2" :messages="$errors->get('featured_image')" />
                         </div>

@@ -76,6 +76,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
         ->name('admin');
     Route::resource('imagemeta', ImageMetaController::class);
 
+
     /* ------------------------------------------------ */
     /*  ---------------- Dashboard Routes ------------- */
     /*------------------------------------------------- */

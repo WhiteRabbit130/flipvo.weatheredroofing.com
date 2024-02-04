@@ -31,7 +31,7 @@
 
     <!-- Hero section Start -->
     <section class="breadcrumb-wrapper hero-page overflow-hidden bg-cover"
-             data-bg-image="assets/img/hero/breadcrumb.jpg">
+             data-bg-image="{{ asset('/assets/img/hero/breadcrumb.jpg') }}">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -49,7 +49,7 @@
         </div>
 
         <div class="hero-right-element">
-            <img src="assets/img/svg/hero-page-shape.svg" alt="">
+            <img src="{{ asset('/assets/img/svg/hero-page-shape.svg') }}" alt="">
         </div>
     </section>
     <!-- Hero section End -->

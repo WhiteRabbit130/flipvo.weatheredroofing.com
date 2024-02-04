@@ -30,4 +30,5 @@ Route::group(['middleware' => ['web']], function () {
     //     ->name('api.images.store');
     // Route::post('/images/store', [ImageMetaController::class, 'store'])
     //     ->name('api.images.store');
+
 });

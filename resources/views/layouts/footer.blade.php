@@ -61,7 +61,7 @@
                             <div class="single-recent-post">
                                 <div class="post__img">
                                     <div class="thumb">
-                                        <img src="assets/img/blog/blog-thumb-1.jpg" alt="">
+                                        <img src="{{ asset('/assets/img/blog/blog-thumb-1.jpg') }}" alt="">
                                     </div>
                                 </div>
                                 <div class="post-content ">
@@ -75,7 +75,7 @@
                             <div class="single-recent-post">
                                 <div class="post__img">
                                     <div class="thumb">
-                                        <img src="assets/img/blog/blog-thumb-2.jpg" alt="">
+                                        <img src="{{ asset('/assets/img/blog/blog-thumb-2.jpg') }}" alt="">
                                     </div>
                                 </div>
                                 <div class="post-content">
@@ -105,25 +105,25 @@
                     <div class="footer__widget footer_one_col_1">
                         <h3 class="widget__title">Photos</h3>
                         <div class="grid-content">
-                            <a href="assets/img/instagram/insta-big-1.jpg" data-fancybox="gallery"
-                               class="popup-gallery bg-cover" data-bg-image="assets/img/instagram/insta-1.jpg"></a>
-                            <a href="assets/img/instagram/insta-big-2.jpg" data-fancybox="gallery"
-                               class="popup-gallery bg-cover" data-bg-image="assets/img/instagram/insta-2.jpg"></a>
-                            <a href="assets/img/instagram/insta-big-3.jpg" data-fancybox="gallery"
-                               class="popup-gallery bg-cover" data-bg-image="assets/img/instagram/insta-3.jpg"></a>
-                            <a href="assets/img/instagram/insta-big-4.jpg" data-fancybox="gallery"
-                               class="popup-gallery bg-cover" data-bg-image="assets/img/instagram/insta-4.jpg"></a>
-                            <a href="assets/img/instagram/insta-big-5.jpg" data-fancybox="gallery"
-                               class="popup-gallery bg-cover" data-bg-image="assets/img/instagram/insta-5.jpg"></a>
-                            <a href="assets/img/instagram/insta-big-6.jpg" data-fancybox="gallery"
-                               class="popup-gallery bg-cover" data-bg-image="assets/img/instagram/insta-6.jpg"></a>
+                            <a href="{{ asset('/assets/img/instagram/insta-big-1.jpg') }}" data-fancybox="gallery"
+                               class="popup-gallery bg-cover" data-bg-image="{{ asset('/assets/img/instagram/insta-1.jpg') }}"></a>
+                            <a href="{{ asset('/assets/img/instagram/insta-big-2.jpg') }}" data-fancybox="gallery"
+                               class="popup-gallery bg-cover" data-bg-image="{{ asset('/assets/img/instagram/insta-2.jpg') }}"></a>
+                            <a href="{{ asset('/assets/img/instagram/insta-big-3.jpg') }}" data-fancybox="gallery"
+                               class="popup-gallery bg-cover" data-bg-image="{{ asset('/assets/img/instagram/insta-3.jpg') }}"></a>
+                            <a href="{{ asset('/assets/img/instagram/insta-big-4.jpg') }}" data-fancybox="gallery"
+                               class="popup-gallery bg-cover" data-bg-image="{{ asset('/assets/img/instagram/insta-4.jpg') }}"></a>
+                            <a href="{{ asset('/assets/img/instagram/insta-big-5.jpg') }}" data-fancybox="gallery"
+                               class="popup-gallery bg-cover" data-bg-image="{{ asset('/assets/img/instagram/insta-5.jpg') }}"></a>
+                            <a href="{{ asset('/assets/img/instagram/insta-big-6.jpg') }}" data-fancybox="gallery"
+                               class="popup-gallery bg-cover" data-bg-image="{{ asset('/assets/img/instagram/insta-6.jpg') }}"></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="footer-home-left">
-            <img src="assets/img/footer/footer-1.png" alt="">
+            <img src="{{ asset('/assets/img/footer/footer-1.png') }}" alt="">
         </div>
     </div>
     <div class="footer__bottom">
@@ -157,10 +157,10 @@
         </div>
     </div>
     <div class="footer-shape">
-        <img src="assets/img/svg/footer-2.svg" alt="">
+        <img src="{{ asset('/assets/img/svg/footer-2.svg') }}" alt="">
     </div>
     <div class="footer-right-shape">
-        <img src="assets/img/svg/site-footer-shape.svg" alt="">
+        <img src="{{ asset('/assets/img/svg/site-footer-shape.svg') }}" alt="">
     </div>
 </footer>
 <!-- footer section end -->

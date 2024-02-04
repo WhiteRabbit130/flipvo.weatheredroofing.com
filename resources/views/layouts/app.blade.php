@@ -127,18 +127,18 @@
     </div>
     <!-- Page Heading -->
     @if (isset($header))
-                <!-- <header class="bg-white shadow"> -->
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
+        <header class="bg-white shadow">
+            <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                {{ $header }}
 
-                        @if (Session::has('notif.success'))
-                        <div class="bg-blue-300 mt-2 p-4">
-                            <span class="text-white">{{ Session::get('notif.success') }}</span>
-                        </div>
-                        @endif
-                    </div>
-                <!-- </header> -->
-            @endif
+                @if (Session::has('notif.success'))
+                <div class="bg-blue-300 mt-2 p-4">
+                    <span class="text-white">{{ Session::get('notif.success') }}</span>
+                </div>
+                @endif
+            </div>
+        </header>
+    @endif
 </header>
 <!-- header section end -->
 
@@ -151,21 +151,21 @@
 @include('layouts.footer')
 
 <!--  ALl JS Plugins ============================= -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/waypoints.min.js"></script>
-<script src="assets/js/counterup.js"></script>
-<script src="assets/js/meanmenu.js"></script>
-<script src="assets/js/scrollUp.min.js"></script>
-<script src="assets/js/swiper-bundle.js"></script>
-<script src="assets/js/owl.carousel.js"></script>
-<script src="assets/js/imagesloaded-pkgd.js"></script>
-<script src="assets/js/isotope.pkgd.min.js"></script>
-<script src="assets/js/magnific-popup.min.js"></script>
-<script src="assets/js/jquery.fancybox.js"></script>
-<script src="assets/js/wow.js"></script>
-<script src="assets/js/validate.min.js"></script>
-<script src="assets/js/active.js"></script>
+<script src="{{ asset('/assets/js/jquery.min.js') }}"></script>
+<script src="{{ asset('/assets/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('/assets/js/waypoints.min.js') }}"></script>
+<script src="{{ asset('/assets/js/counterup.js') }}"></script>
+<script src="{{ asset('/assets/js/meanmenu.js') }}"></script>
+<script src="{{ asset('/assets/js/scrollUp.min.js') }}"></script>
+<script src="{{ asset('/assets/js/swiper-bundle.js') }}"></script>
+<script src="{{ asset('/assets/js/owl.carousel.js') }}"></script>
+<script src="{{ asset('/assets/js/imagesloaded-pkgd.js') }}"></script>
+<script src="{{ asset('/assets/js/isotope.pkgd.min.js') }}"></script>
+<script src="{{ asset('/assets/js/magnific-popup.min.js') }}"></script>
+<script src="{{ asset('/assets/js/jquery.fancybox.js') }}"></script>
+<script src="{{ asset('/assets/js/wow.js') }}"></script>
+<script src="{{ asset('/assets/js/validate.min.js') }}"></script>
+<script src="{{ asset('/assets/js/active.js') }}"></script>
 
 @stack('js')
 </body>
