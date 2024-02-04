@@ -5,7 +5,6 @@
     </script>
 @endpush
 
-
 <!-- footer section start -->
 <footer class="footer-1 overflow-hidden">
     <div class="footer__top">
