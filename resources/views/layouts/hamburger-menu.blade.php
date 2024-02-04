@@ -46,7 +46,6 @@
                             </div>
                         </div>
                     </li>
-
                     <li class="info_item">
                         <div class="item_inner  d-flex align-items-center gap-2">
                             <div class="icon">
