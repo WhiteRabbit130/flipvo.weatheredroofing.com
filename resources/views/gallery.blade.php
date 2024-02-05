@@ -25,4 +25,9 @@
 
 <x-app-layout>
     <h3>Gallery Page</h3>
+    <div class="container page-top">
+        <div class="row">
+
+        </div>
+    </div>
 </x-app-layout>
