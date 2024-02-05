@@ -4,6 +4,8 @@
 @endpush
 
 @push('js')
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+
     <script>
     </script>
 @endpush
