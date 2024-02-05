@@ -27,7 +27,8 @@
     <h3>Gallery Page</h3>
     <div class="container page-top">
         <div class="row">
-
+        @foreach ($images as $image)
+        @endforeach
         </div>
     </div>
 </x-app-layout>
