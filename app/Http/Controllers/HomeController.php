@@ -6,6 +6,7 @@ use Auth;
 use App\Models\Invoice;
 use App\Models\Doc;
 use App\Models\User;
+use App\Models\ImageMeta;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 use Exception;
@@ -57,7 +58,8 @@ class HomeController extends Controller
      * */
     public function gallery()
     {
-        return view('gallery');
+        $images = ImageMeta::all();
+        return view('gallery', compact('images'));
     }
 
     /*
