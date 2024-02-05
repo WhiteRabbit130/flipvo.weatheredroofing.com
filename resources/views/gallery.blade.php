@@ -23,6 +23,21 @@
         .thumb{
             margin-bottom: 30px;
         }
+
+        .page-top{
+            margin-top:85px;
+        }
+
+        img.zoom {
+            width: 100%;
+            height: 200px;
+            border-radius:5px;
+            object-fit:cover;
+            -webkit-transition: all .3s ease-in-out;
+            -moz-transition: all .3s ease-in-out;
+            -o-transition: all .3s ease-in-out;
+            -ms-transition: all .3s ease-in-out;
+        }
     </style>
 @endpush
 
