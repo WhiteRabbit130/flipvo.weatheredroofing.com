@@ -1,6 +1,29 @@
 @push('css')
     <!-- @vite('resources/css/home.css') -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+    <style>
+         body {
+            /* background-color:#1d1d1d !important; */
+            font-family: "Asap", sans-serif;
+            color:#989898;
+            /* margin:10px; */
+            font-size:16px;
+        }
+
+        #demo {
+        height:100%;
+        position:relative;
+        overflow:hidden;
+        }
+
+        .green{
+        background-color:#6fb936;
+        }
+
+        .thumb{
+            margin-bottom: 30px;
+        }
+    </style>
 @endpush
 
 @push('js')
