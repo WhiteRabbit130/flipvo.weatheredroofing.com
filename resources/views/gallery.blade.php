@@ -49,6 +49,14 @@
         .modal-header {
             border-bottom: none;
         }
+
+        .modal-title {
+            color:#000;
+        }
+
+        .modal-footer{
+            display:none;
+        }
     </style>
 @endpush
 
