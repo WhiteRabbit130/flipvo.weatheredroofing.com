@@ -7,6 +7,19 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 
     <script>
+        $(document).ready(function(){
+            $(".fancybox").fancybox({
+                openEffect: "none",
+                closeEffect: "none"
+            });
+
+            $(".zoom").hover(function(){
+                $(this).addClass('transition');
+            }, function(){
+
+                $(this).removeClass('transition');
+            });
+        });
     </script>
 @endpush
 
