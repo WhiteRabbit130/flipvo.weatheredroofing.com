@@ -11,13 +11,13 @@
         }
 
         #demo {
-        height:100%;
-        position:relative;
-        overflow:hidden;
+            height:100%;
+            position:relative;
+            overflow:hidden;
         }
 
         .green{
-        background-color:#6fb936;
+            background-color:#6fb936;
         }
 
         .thumb{
