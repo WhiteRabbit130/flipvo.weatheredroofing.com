@@ -1,5 +1,6 @@
 @push('css')
-    @vite('resources/css/home.css')
+    <!-- @vite('resources/css/home.css') -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
 @endpush
 
 @push('js')
