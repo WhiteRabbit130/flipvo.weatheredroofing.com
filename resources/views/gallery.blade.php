@@ -27,13 +27,13 @@
     <h3>Gallery Page</h3>
     <div class="container page-top">
         <div class="row">
-        @foreach ($images as $image)
-        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            @foreach ($images as $image)
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                     <a href="/storage/{{ $image->path }}?auto=compress&cs=tinysrgb&h=650&w=940" class="fancybox" rel="ligthbox">
                         <img  src="/storage/{{ $image->path }}?auto=compress&cs=tinysrgb&h=650&w=940" class="zoom img-fluid "  alt="{{ $image->title }}">
                     </a>
                 </div>
-        @endforeach
+            @endforeach
         </div>
     </div>
 </x-app-layout>
