@@ -38,6 +38,17 @@
             -o-transition: all .3s ease-in-out;
             -ms-transition: all .3s ease-in-out;
         }
+
+        .transition {
+            -webkit-transform: scale(1.2);
+            -moz-transform: scale(1.2);
+            -o-transform: scale(1.2);
+            transform: scale(1.2);
+        }
+
+        .modal-header {
+            border-bottom: none;
+        }
     </style>
 @endpush
 
