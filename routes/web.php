@@ -62,7 +62,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/messages', [MessagesController::class, 'index'])
         ->name('messages.index');
 
-
     /* ------------------------------------------------ */
     /*  ---------------- Docs Routes ------------------ */
     /*------------------------------------------------- */
