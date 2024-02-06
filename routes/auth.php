@@ -76,7 +76,6 @@ Route::middleware(['auth', 'admin'])->group(function () {
         ->name('admin');
     Route::resource('imagemeta', ImageMetaController::class);
 
-
     /* ------------------------------------------------ */
     /*  ---------------- Dashboard Routes ------------- */
     /*------------------------------------------------- */
@@ -91,7 +90,6 @@ Route::middleware(['auth', 'admin'])->group(function () {
 
     Route::get('/admin/admins', [AdminController::class, 'admins'])
         ->name('admin.admins.index');
-
 
     /* ------------------------------------------------ */
     /*  ---------------- Rentals Routes --------------- */
