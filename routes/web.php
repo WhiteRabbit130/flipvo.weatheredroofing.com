@@ -44,10 +44,6 @@ Route::get('/contact', [HomeController::class, 'contact'])
 Route::get('/gallery', [HomeController::class, 'gallery'])
     ->name('gallery');
 
-
-
-
-
 /*
  * Authenticated Users
  * */
