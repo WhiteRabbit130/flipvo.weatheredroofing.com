@@ -21,9 +21,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::group(['middleware' => ['web']], function () {
-    /* ------------------------------------------------ */
-    /*  ---------------- Rentals Routes --------------- */
-    /*------------------------------------------------- */
-
-
 });
