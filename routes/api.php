@@ -24,11 +24,6 @@ Route::group(['middleware' => ['web']], function () {
     /* ------------------------------------------------ */
     /*  ---------------- Rentals Routes --------------- */
     /*------------------------------------------------- */
-    // Route::post('/images/store', [ImageMetaController::class, 'store'])
-    //     ->name('api.images.store');
-    // Route::post('/images/store', [ImageMetaController::class, 'store'])
-    //     ->name('api.images.store');
-    // Route::post('/images/store', [ImageMetaController::class, 'store'])
-    //     ->name('api.images.store');
+
 
 });
