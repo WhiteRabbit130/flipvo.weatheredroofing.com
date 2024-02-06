@@ -78,10 +78,6 @@ Route::middleware('auth')->group(function () {
     // Get all docs for the user
     Route::get('/docs', [DocsController::class, 'getDocs'])->name('docs.getDocs');
 
-
-
-
-
     /* ------------------------------------------------ */
     /*  ---------------- Profile Routes --------------- */
     /*------------------------------------------------- */
