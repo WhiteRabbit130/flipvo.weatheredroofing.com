@@ -52,13 +52,6 @@ Route::middleware('auth')->group(function () {
     /*  ---------------- Basic Pages Routes ----------- */
     /*------------------------------------------------- */
 
-
-
-
-
-
-
-
     Route::get('/dashboard', [HomeController::class, 'dashboard'])
         ->middleware(['auth', 'verified'])
         ->name('dashboard');
