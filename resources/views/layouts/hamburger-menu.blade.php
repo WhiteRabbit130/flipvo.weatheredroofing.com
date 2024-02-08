@@ -29,7 +29,6 @@
         </div>
 
         <div class="hamburger_bottom">
-
             <div class="contact_info">
                 <ul class="info_list">
                     <li class="info_item">
