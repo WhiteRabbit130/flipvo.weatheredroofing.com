@@ -272,10 +272,6 @@ function showImage(file) {
         // $pre.appendTo('.image-container');
 
         // $clone.clone(true).appendTo('.image-container');
-        // $clone.clone(true).appendTo('.image-container');
-        // $clone.clone(true).appendTo('.image-container');
-        // $clone.clone(true).appendTo('.image-container');
-        // $clone.clone(true).appendTo('.image-container');
 
         // todo - set the primary stuff...
         // add primary to first
