@@ -39,7 +39,6 @@ let $primaryAlert = $('.alert-primary');
 let $saleType = $('#sale-type');
 // reset saleType
 $saleType.val('buy-now');
-
 const $imagesInput = $('#images');
 
 
