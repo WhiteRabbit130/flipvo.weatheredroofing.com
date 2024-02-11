@@ -41,7 +41,6 @@ let $saleType = $('#sale-type');
 $saleType.val('buy-now');
 const $imagesInput = $('#images');
 
-
 /*
 * Handle showing images and uploading images on change
 * *********************************************************/
