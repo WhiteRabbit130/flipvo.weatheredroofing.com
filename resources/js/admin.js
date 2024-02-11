@@ -257,7 +257,6 @@ function showImage(file) {
     $clone.attr('id', '')
         .removeClass('d-none')
         .data('name', file.name); // set file name, for primary
-
     reader.readAsDataURL(file);
 
     reader.onload = function (e) { // Show preview image
