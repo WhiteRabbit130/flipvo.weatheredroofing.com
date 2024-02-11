@@ -194,8 +194,6 @@ function initUsersTable(type, $table) {
 
 export {initUsersTable};
 
-
-
 document.addEventListener('DOMContentLoaded', () => {
 
     console.log('utils.js - DOMContentLoaded');
