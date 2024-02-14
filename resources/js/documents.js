@@ -44,6 +44,7 @@ let activeDoc = null;
 * - Delimiter
 * - InlineCode
 * */
+
 // Initialize Editor.js
 let editor = new EditorJS({
     holder: 'editor-js',
