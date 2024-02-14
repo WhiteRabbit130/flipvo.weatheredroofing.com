@@ -87,22 +87,18 @@ function initUsersTable(type, $table) {
 
         const columns = [
             {data: 'id'},
-
             {data: 'name'},
             {
                 data: null,
                 defaultContent: typeIcon,
                 orderable: false
             },
-
             {data: 'type'},
             {data: 'email'},
-
             {
                 data: 'created',
                 width: '200px',
             },
-
             // Delete button
             {
                 data: null, // This column does not correspond to any data field
