@@ -144,7 +144,6 @@
     {{ $slot }}
 </main>
 
-
 @include('layouts.footer')
 
 <!--  ALl JS Plugins ============================= -->
