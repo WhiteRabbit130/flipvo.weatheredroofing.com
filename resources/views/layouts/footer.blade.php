@@ -64,7 +64,7 @@
                                     </div>
                                 </div>
                                 <div class="post-content ">
-                                        <span class="date"><i class="fa-regular fa-calendar-days"></i>24th May
+                                    <span class="date"><i class="fa-regular fa-calendar-days"></i>24th May
                                             2023</span>
                                     <h6 class="content"><a href="blog-details.html">This Place Really Place For
                                             Awesome</a></h6>
@@ -78,7 +78,7 @@
                                     </div>
                                 </div>
                                 <div class="post-content">
-                                        <span class="date"><i class="fa-regular fa-calendar-days"></i>24th May
+                                    <span class="date"><i class="fa-regular fa-calendar-days"></i>24th May
                                             2023</span>
                                     <h6 class="content"><a href="blog-details.html">This Place Really Place For
                                             Awesome</a></h6>
